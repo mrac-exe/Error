@@ -56,6 +56,7 @@ class Post(models.Model):
     post_likes = models.ManyToManyField(User, blank=True, related_name="post_likes")
     post_dislikes = models.ManyToManyField(User, blank=True, related_name="post_dislikes")
 
+
     def like(self):
         self.rating +=1
         self.save()
